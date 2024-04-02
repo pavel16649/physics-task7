@@ -55,24 +55,27 @@ const Graph = () => {
 
 
     return (
-        <div className='body' style={{ position: 'relative' }}>
+        <div className='body' style={{position: 'relative'}}>
             <div>
                 <h1>Сложение колебаний с одинаковой амплитудой и незначительно отличающейся частотой</h1>
                 <div className='inputs'>
                     <div className='input'>
                         Введите частоту первого колебания (Гц): <input type="number" value={v1} step='any' min='0'
-                                                              onChange={(e) => Update_v1(parseFloat(e.target.value))}/>
+                                                                       onChange={(e) => Update_v1(parseFloat(e.target.value))}/>
                     </div>
                     <div className='input'>
                         Введите частоту второго колебания (Гц): <input type="number" value={v2} step='any' min='0'
-                                                            onChange={(e) => Update_v2(parseFloat(e.target.value))}/>
+                                                                       onChange={(e) => Update_v2(parseFloat(e.target.value))}/>
                     </div>
                     <div className='input'>
                         Введите амплитуду A (В): <input type="number" value={A} step='any' min='0'
-                                                            onChange={(e) => setA(parseFloat(e.target.value))}/>
+                                                        onChange={(e) => setA(parseFloat(e.target.value))}/>
                     </div>
                 </div>
             </div>
+            <p>
+                Чтобы отключить показ определенного графика, щелкните на его название в легенде.
+            </p>
             <Plot
                 data={[
                     {
